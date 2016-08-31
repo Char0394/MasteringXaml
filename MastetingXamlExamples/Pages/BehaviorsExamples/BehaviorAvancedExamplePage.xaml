@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MastetingXamlExamples.Pages.BehaviorsExamples.BehaviorAvancedExamplePage"
+		     xmlns:behavior="clr-namespace:MastetingXamlExamples.Helpers.Behaviors;assembly=MastetingXamlExamples"
+		     xmlns:controls="clr-namespace:MastetingXamlExamples.Controls;assembly=MastetingXamlExamples"
+		     BackgroundColor="{StaticResource MainAppColor}"
+			 Padding="20">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="CenterAndExpand">
+		   <controls:ExtendedEntry Style="{StaticResource mainEntryStyle}"
+				  Placeholder="First Name"
+	 	  		  Keyboard="Numeric"
+				  Text="{Binding Email}"
+				  IsBorderVisible="{Binding FirstNameRequired, Mode=TwoWay}">
+			 	    <controls:ExtendedEntry.Behaviors>
+				       <behavior:EmptyEntryValidatorBehavior DefaultPlaceHolder="First Name*" TextRequired="First Name is a required field"/>
+				     </controls:ExtendedEntry.Behaviors> 
+          </controls:ExtendedEntry >
+		 <Button Text="Validate"
+				 BackgroundColor="White"
+				 Command="{Binding OnValidateEntryCommand}"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

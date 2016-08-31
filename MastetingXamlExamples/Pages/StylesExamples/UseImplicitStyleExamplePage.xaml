@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MastetingXamlExamples.StylesExamples.UseImplicitStyleExamplePage"
+		     Padding="20"
+			 BackgroundColor="#641417">
+	<ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry">
+              <Setter Property="HeightRequest" Value="40" />
+              <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+			  <Setter Property="FontSize" Value="13" />
+			  <Setter Property="TextColor" Value="Silver" />
+            </Style>
+			<Style  TargetType="Button">
+              <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+			  <Setter Property="FontSize" Value="13" />
+			  <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+      </ContentPage.Resources>
+	<ContentPage.Content>
+		  <StackLayout VerticalOptions="CenterAndExpand">
+		       <Entry Placeholder="Name"/>
+
+			   <Entry Placeholder="Last Name" />
+
+			   <Entry Placeholder="Tell us about you" />
+
+			   <Entry Placeholder="Age" />
+
+			<Button Text="ENVIAR"
+					BackgroundColor="Gray"/> 
+			<Button Text="CANCELAR"
+					BackgroundColor="Red"/> 
+		  </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
+
+
+	     

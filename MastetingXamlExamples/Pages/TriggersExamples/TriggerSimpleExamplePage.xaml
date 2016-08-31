@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		 	 x:Class="MastetingXamlExamples.Pages.TriggerSimpleExamplePage"
+			 Title="Trigger Simple Example">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="CenterAndExpand"
+					 HorizontalOptions="CenterAndExpand">
+		 
+		  <Entry WidthRequest="200">
+			    <Entry.Triggers> 
+			        <Trigger TargetType="Entry"
+			             Property="IsFocused" Value="True">
+			            <Setter Property="BackgroundColor" Value="{StaticResource MainAppColor}" />
+						<Setter Property="TextColor" Value="White" />
+			        </Trigger>
+				    <Trigger TargetType="Entry"
+			             Property="IsFocused" Value="False">
+			            <Setter Property="BackgroundColor" Value="White" />
+						<Setter Property="TextColor" Value="Black" />
+			        </Trigger>
+			    </Entry.Triggers>
+			</Entry>
+
+		 <Entry x:Name="email"
+				Text=""
+				Placeholder="Email" />
+
+		<Button x:Name="button" 
+				Text="Save"
+		        FontSize="Large"
+				BackgroundColor="Silver"
+		        HorizontalOptions="FillAndExpand">
+		    <Button.Triggers>
+				<MultiTrigger TargetType="Button"> 
+					<MultiTrigger.Conditions>
+						<BindingCondition Binding="{Binding Source={x:Reference email},
+		                                       Path=Text.Length}"
+		                                   Value="0" />
+					</MultiTrigger.Conditions>
+						
+		            <Setter Property="IsEnabled" Value="False" />
+		        </MultiTrigger>
+		    </Button.Triggers>
+		</Button>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

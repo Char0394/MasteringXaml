@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MastetingXamlExamples.Pages.TriggerAvancedExamplePage"
+			 Padding="20"
+			 Title="Trigger Advanced Test">
+	<ContentPage.Content>
+		<StackLayout>
+		 	 <StackLayout 
+                    BackgroundColor="{DynamicResource WindowBackgroundTable}"
+                    VerticalOptions="FillAndExpand">
+                <StackLayout Spacing="0">
+	             
+	                 <StackLayout Style="{DynamicResource SubMenuStyle}">
+                			<StackLayout Style="{DynamicResource SubMenuItemStyle}">
+                			   <StackLayout HorizontalOptions="CenterAndExpand"
+                			   				Orientation="Horizontal"
+											VerticalOptions="Center">
+     
+                    			   <Label Text="Fruits"
+                    			   		  IsEnabled="{Binding IsItemMenuCheckOutSelected}"
+									  	  Font="AvenirNextCondensed-Medium"
+										  FontSize="14">
+								            <Label.Triggers>
+								                <Trigger TargetType="Label"
+										             Property="IsEnabled" Value="True">
+										            <Setter Property="TextColor" Value="Black" />
+										        </Trigger>
+										        <Trigger TargetType="Label"
+										             Property="IsEnabled" Value="False">
+										            <Setter Property="TextColor" Value="Gray" />
+										        </Trigger>
+								            </Label.Triggers>
+                    			   </Label>
+                    			   </StackLayout>
+							
+                    			   <BoxView Style="{DynamicResource SubMenuDivisorLineStyle}"/>
+                    		     <StackLayout.GestureRecognizers>
+								       <TapGestureRecognizer 
+							                Command="{Binding MenuSelectedCommand}"
+							                CommandParameter="Fruits" />
+							   </StackLayout.GestureRecognizers>
+                    		</StackLayout>
+							<StackLayout Style="{DynamicResource SubMenuItemStyle}">
+                			   <StackLayout HorizontalOptions="CenterAndExpand"
+                			   				Orientation="Horizontal"
+											VerticalOptions="Center">
+                    			  
+                    			   <Label Text="Juices"
+                    			   		  IsEnabled="{Binding IsItemMenuSellerSelected}"
+										  Font="AvenirNextCondensed-Medium"
+										  FontSize="14">
+								          <Label.Triggers>
+								                <Trigger TargetType="Label"
+										             Property="IsEnabled" Value="True">
+										            <Setter Property="TextColor" Value="Black" />
+										        </Trigger>
+										        <Trigger TargetType="Label" Property="IsEnabled" Value="False">
+										            <Setter Property="TextColor" Value="Gray" />
+										        </Trigger>
+								            </Label.Triggers>
+                    			   </Label>
+                    			  </StackLayout>
+                    			   <BoxView Style="{DynamicResource SubMenuDivisorLineStyle}"/>
+                    			  <StackLayout.GestureRecognizers>
+								       <TapGestureRecognizer 
+							                Command="{Binding MenuSelectedCommand}"
+							                CommandParameter="Juices" />
+							   </StackLayout.GestureRecognizers>
+                    		</StackLayout>
+                			 <StackLayout Style="{DynamicResource SubMenuItemStyle}">
+                			   <StackLayout HorizontalOptions="CenterAndExpand"
+                			   				Orientation="Horizontal">
+                    			  
+                    			   <Label Text="Chicken"
+                    			   		  Style="{DynamicResource SubMenuItemTextStyle}"
+                    			   		  IsEnabled="{Binding IsItemMenuSheetSelected}"
+										  Font="AvenirNextCondensed-Medium"
+										  FontSize="14">
+								               <Label.Triggers>
+								                <Trigger TargetType="Label"  Property="IsEnabled" Value="True">
+										            <Setter Property="TextColor" Value="Black" />
+										        </Trigger>
+										        <Trigger TargetType="Label" Property="IsEnabled" Value="False">
+										            <Setter Property="TextColor" Value="Gray" />
+										        </Trigger>
+								            </Label.Triggers>
+                    			   </Label>
+                    			  </StackLayout>
+                    			  <StackLayout.GestureRecognizers>
+								       <TapGestureRecognizer 
+							                Command="{Binding MenuSelectedCommand}"
+							                CommandParameter="Chicken" />
+							   </StackLayout.GestureRecognizers>
+                			 </StackLayout>
+	                    </StackLayout>
+                </StackLayout>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

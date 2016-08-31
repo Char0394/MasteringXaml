@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MastetingXamlExamples.StylesExamples.UseGlobalStyleExamplePage"
+		     Padding="20"
+			 BackgroundColor="#641417">
+		<ContentPage.Content>
+		  <StackLayout VerticalOptions="CenterAndExpand">
+		       <Entry Placeholder="Name"
+					  Style="{StaticResource mainEntryStyle}" />
+
+			   <Entry Placeholder="Last Name"
+					  Style="{StaticResource mainEntryStyle}" />
+
+			   <Entry Placeholder="Tell us about you"
+					  Style="{StaticResource mainEntryStyle}" />
+
+			   <Entry Placeholder="Age"
+					 Style="{StaticResource mainEntryStyle}" />
+
+				<Button Text="ENVIAR"
+						BackgroundColor="Gray"
+						Style="{StaticResource mainButtonStyle}"/> 
+				<Button Text="CANCELAR"
+						BackgroundColor="Red"
+						Style="{StaticResource mainButtonStyle}"/> 
+		  </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
+

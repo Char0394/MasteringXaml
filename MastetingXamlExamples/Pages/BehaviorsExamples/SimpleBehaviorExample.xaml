@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MastetingXamlExamples.Pages.BehaviorsExamples.SimpleBehaviorExample"
+			 xmlns:behavior="clr-namespace:MastetingXamlExamples.Helpers.Behaviors;assembly=MastetingXamlExamples"
+		     BackgroundColor="{StaticResource MainAppColor}"
+			 Padding="20">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="CenterAndExpand">
+		   <Entry Style="{StaticResource mainEntryStyle}"
+				  Placeholder="Enter Code"
+	 	  		  Keyboard="Numeric">
+			 	    <Entry.Behaviors>
+				       <behavior:MaxLengthValidator  MaxLength="4"/>
+				       <behavior:NumericValidationBehavior/>
+				     </Entry.Behaviors> 
+          </Entry>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

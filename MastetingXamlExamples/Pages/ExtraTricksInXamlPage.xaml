@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MastetingXamlExamples.Pages.ExtraTricksInXamlPage"
+			 xmlns:view="clr-namespace:MastetingXamlExamples.Views;assembly=MastetingXamlExamples"
+			 xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+		     BackgroundColor="{StaticResource MainAppColor}">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand"
+					 HorizontalOptions="FillAndExpand">
+			
+		    <BoxView BackgroundColor="Silver"
+						 HorizontalOptions="FillAndExpand"
+						 HeightRequest="100" />
+			
+			 <controls:CircleImage Aspect="AspectFill"
+							  HorizontalOptions="Center"
+							  WidthRequest="80"
+							  HeightRequest="80"
+							  Margin="0,-50,0,40"
+					  		  Source="https://puu.sh/qTmIL/7c8d608cce.png"/>
+
+		   <Label Text="Mr doggie &#10; Male &#10; 15 years old" 
+				  Style="{DynamicResource LightLabelStyle}" />
+
+		  <Label Text="{Binding TestNumber, StringFormat='Number of Records = {0:N}'}"
+				 Style="{DynamicResource LightLabelStyle}"/>
+
+			<view:CustomTestView>
+				<x:Arguments>
+					<x:String>Hello I'm passing parameters using Xaml</x:String>
+					<x:Double>1.1</x:Double>
+		     	 </x:Arguments>
+			</view:CustomTestView> 
+
+
+			 <Label Text="&#128540;" HorizontalOptions="Center"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

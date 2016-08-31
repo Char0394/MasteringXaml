@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MastetingXamlExamples.Pages.ContentViewsExamples.CustomHomePage"
+			 BackgroundColor="{StaticResource MainAppColor}"
+			 xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+		     xmlns:view="clr-namespace:MastetingXamlExamples.Views;assembly=MastetingXamlExamples"
+			 Title="Animal Tinder">
+	<ContentPage.Content>
+		<StackLayout>
+	    <view:CustomHeaderView/>
+			
+		<StackLayout Orientation="Horizontal"
+					 Padding="20">
+			<Button Text="Reject"
+					HorizontalOptions="FillAndExpand" 
+					BackgroundColor="Red"
+					TextColor="White"/>
+				
+			<Button Text="Match"
+					HorizontalOptions="FillAndExpand" 
+					BackgroundColor="Green"
+					TextColor="White"/>
+
+		</StackLayout>
+			
+		<Button Text="Go to full Profile"
+					HorizontalOptions="FillAndExpand" 
+					BackgroundColor="White"
+					Command="{Binding OnGotoProfileCommand}"/>
+	  </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
+
+
+
+<!--<view:CustomHeaderView/>-->

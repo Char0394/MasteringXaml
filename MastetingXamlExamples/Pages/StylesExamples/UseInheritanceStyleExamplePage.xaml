@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MastetingXamlExamples.Pages.StylesExamples.UseInheritanceStyleExamplePage"
+		  	 Padding="20"
+			 BackgroundColor="#641417">
+	<ContentPage.Resources>
+        <ResourceDictionary>
+			<Style x:Key="mainEntryStyle" TargetType="Entry">
+              <Setter Property="HeightRequest" Value="40" />
+              <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+			  <Setter Property="FontSize" Value="13" />
+			  <Setter Property="TextColor" Value="Silver" />
+            </Style>
+			<Style x:Key="mainBoldEntryStyle" TargetType="Entry" BasedOn="{StaticResource mainEntryStyle}">
+			  <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+			<Style x:Key="mainButtonStyle" TargetType="Button">
+              <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+			  <Setter Property="FontSize" Value="13" />
+			  <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+      </ContentPage.Resources>
+	<ContentPage.Content>
+		  <StackLayout VerticalOptions="CenterAndExpand">
+		       <Entry Placeholder="Name"
+					  Style="{StaticResource mainBoldEntryStyle}"/>
+
+			   <Entry Placeholder="Last Name"
+					  Style="{StaticResource mainEntryStyle}" />
+
+			   <Entry Placeholder="Tell us about you"
+					  Style="{StaticResource mainEntryStyle}" />
+
+			   <Entry Placeholder="Age"
+					 Style="{StaticResource mainEntryStyle}" />
+
+			<Button Text="ENVIAR"
+					BackgroundColor="Gray"
+					Style="{StaticResource mainButtonStyle}"/> 
+			<Button Text="CANCELAR"
+					BackgroundColor="Red"
+					Style="{StaticResource mainButtonStyle}"/> 
+		  </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
+

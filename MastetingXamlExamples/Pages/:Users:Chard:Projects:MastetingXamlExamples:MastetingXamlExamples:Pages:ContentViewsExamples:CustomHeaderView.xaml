@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MastetingXamlExamples.Pages.ContentViewsExamples.CustomHeaderView">
+	<ContentView.Content>
+		<StackLayout>
+			  <StackLayout BackgroundColor="{StaticResource HeaderDolor}"
+						 HorizontalOptions="FillAndExpand"
+						 Padding="10,20,10,10">
+				<controls:CircleImage Aspect="AspectFill"
+								  HorizontalOptions="Center"
+								  WidthRequest="80"
+								  HeightRequest="80"
+						  		  Source="https://puu.sh/qTmIL/7c8d608cce.png"/>
+				
+			    <Label Text="Mr Doggie"
+					   HorizontalOptions="Center"/>
+
+				<Label Text="15 years old"
+					   HorizontalOptions="Center"/>
+
+				<Label Text="Single"
+					   HorizontalOptions="Center"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentView.Content>
+</ContentView>

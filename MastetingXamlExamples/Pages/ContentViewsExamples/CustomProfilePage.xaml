@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MastetingXamlExamples.Pages.ContentViewsExamples.CustomProfilePage"
+		      BackgroundColor="{StaticResource MainAppColor}"
+			 xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+	<ContentPage.Content>
+		<StackLayout>
+		<StackLayout BackgroundColor="{StaticResource HeaderDolor}"
+					 HorizontalOptions="FillAndExpand"
+					 Padding="10,20,10,10">
+			<controls:CircleImage Aspect="AspectFill"
+							  HorizontalOptions="Center"
+							  WidthRequest="80"
+							  HeightRequest="80"
+					  		  Source="https://puu.sh/qTmIL/7c8d608cce.png"/>
+			
+		    <Label Text="Mr Doggie"
+				   HorizontalOptions="Center"/>
+
+			<Label Text="15 years old"
+				   HorizontalOptions="Center"/>
+
+			<Label Text="Single"
+				   HorizontalOptions="Center"/>
+		</StackLayout>
+
+		<StackLayout Padding="20">
+			<Label Text="I have insterest for know some beautiful cats"
+					TextColor="White"/>
+			<Label Text="I like sports"
+					TextColor="White"/>
+			<Label Text="I like to eat"
+					TextColor="White"/>
+			<Label Text="Cats"
+					TextColor="White"/>
+		</StackLayout>
+	  </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

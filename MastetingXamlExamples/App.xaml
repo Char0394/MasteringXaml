@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MastetingXamlExamples.App">
+	<Application.Resources>
+		<ResourceDictionary>
+
+			<Color x:Key="MainAppColor">#641417</Color>
+			<Color x:Key="subMenuColor">#F7F7F7</Color>
+			<Color x:Key="HeaderDolor">White</Color>
+			
+			<OnPlatform x:TypeArguments="Color" Android="Pink" iOS="#641417" WinPhone="#e9e9e9" x:Key="mainAppByPlatformColor"/>
+
+			<Style TargetType="Label" x:Name="triggerTestLabelStyle">
+	                <Style.Triggers>
+	                <Trigger TargetType="Label"
+	                         Property="IsEnabled" Value="True">
+	                    <Setter Property="TextColor" Value="Black" />
+	                </Trigger>
+				   <Trigger TargetType="Label"
+			             Property="IsEnabled" Value="False">
+			            <Setter Property="TextColor" Value="Gray" />
+			        </Trigger>
+	            </Style.Triggers>
+	        </Style>
+			
+			<Style x:Key="mainEntryStyle" TargetType="Entry">
+              <Setter Property="HeightRequest" Value="40" />
+              <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+			  <Setter Property="FontSize" Value="13" />
+			  <Setter Property="TextColor" Value="Silver" />
+            </Style>
+
+			<Style x:Key="mainButtonStyle" TargetType="Button">
+              <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+			  <Setter Property="FontSize" Value="13" />
+			  <Setter Property="TextColor" Value="White" />
+            </Style>
+			
+			<Style x:Key="SubMenuDivisorLineStyle" TargetType="BoxView">
+                <Setter Property="BackgroundColor" Value="#d1d1d1" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="WidthRequest" Value="1" />
+                <Setter Property="Margin" Value="0,10,0,10" />
+            </Style>
+			
+			<Style x:Key="SubMenuStyle" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="{StaticResource subMenuColor}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+
+			<Style x:Key="LightLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+			
+			 <Style x:Key="SubMenuItemStyle" TargetType="StackLayout">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>
